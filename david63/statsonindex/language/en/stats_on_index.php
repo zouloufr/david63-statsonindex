@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'DETAILS'				=> 'Details',
+	'EXTENDED'				=> '<strong>Extended statistics</strong>',
 
 	'FILES_PER_DAY_OTHER'	=> 'Attachments per day <strong>%.2f</strong>',
 	'FILES_PER_DAY_ZERO'	=> 'Attachments per day <strong>None</strong>',
