@@ -2,7 +2,7 @@
 /**
 *
 * @package Statistics on Index Extension
-* @copyright (c) 2015 
+* @copyright (c) 2015
 * @license http://opensource.org/licenses/gpl-2.0.php GNU General Public License v2
 *
 */
@@ -37,31 +37,38 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'START_DATE'			=> 'We have been online since',
+	'DETAILS'				=> 'Details',
+
+	'FILES_PER_DAY_OTHER'	=> 'Attachments per day <strong>%.2f</strong>',
+	'FILES_PER_DAY_ZERO'	=> 'Attachments per day <strong>None</strong>',
+	'FILES_PER_USER_OTHER'	=> 'Attachments per member <strong>%.2f</strong>',
+	'FILES_PER_USER_ZERO'	=> 'Attachments per member <strong>None</strong>',
+	'FILES_PER_YEAR_OTHER'	=> 'Attachments per year <strong>%d</strong>',
+	'FILES_PER_YEAR_ZERO'	=> 'Attachments per year <strong>None</strong>',
+
 	'POSTS_PER_DAY_OTHER'	=> 'Posts per day <strong>%.2f</strong>',
 	'POSTS_PER_DAY_ZERO'	=> 'Posts per day <strong>None</strong>',
 	'POSTS_PER_TOPIC_OTHER'	=> 'Posts per topic <strong>%.2f</strong>',
-	'POSTS_PER_YEAR_OTHER'	=> 'Posts per year <strong>%d</strong>',
-	'POSTS_PER_YEAR_ZERO'	=> 'Posts per year <strong>None</strong>',
 	'POSTS_PER_TOPIC_ZERO'	=> 'Posts per topic <strong>None</strong>',
 	'POSTS_PER_USER_OTHER'	=> 'Posts per member <strong>%.2f</strong>',
 	'POSTS_PER_USER_ZERO'	=> 'Posts per member <strong>None</strong>',
+	'POSTS_PER_YEAR_OTHER'	=> 'Posts per year <strong>%d</strong>',
+	'POSTS_PER_YEAR_ZERO'	=> 'Posts per year <strong>None</strong>',
+
+	'START_DATE'			=> 'We have been online since',
+	'SUMMARY'				=> 'Summary',
+
 	'TOPICS_PER_DAY_OTHER'	=> 'Topics per day <strong>%.2f</strong>',
 	'TOPICS_PER_DAY_ZERO'	=> 'Topics per day <strong>None</strong>',
-	'TOPICS_PER_YEAR_OTHER'	=> 'Topics per year <strong>%d</strong>',
-	'TOPICS_PER_YEAR_ZERO'	=> 'Topics per year <strong>None</strong>',
 	'TOPICS_PER_USER_OTHER'	=> 'Topics per member <strong>%.2f</strong>',
 	'TOPICS_PER_USER_ZERO'	=> 'Topics per member <strong>None</strong>',
+	'TOPICS_PER_YEAR_OTHER'	=> 'Topics per year <strong>%d</strong>',
+	'TOPICS_PER_YEAR_ZERO'	=> 'Topics per year <strong>None</strong>',
+	'TOTAL_FILES_OTHER'		=> 'Total attachments <strong>%d</strong>',
+	'TOTAL_FILES_ZERO'		=> 'Total attachments <strong>None</strong>',
+
 	'USERS_PER_DAY_OTHER'	=> 'Members per day <strong>%.2f</strong>',
 	'USERS_PER_DAY_ZERO'	=> 'Members per day <strong>None</strong>',
 	'USERS_PER_YEAR_OTHER'	=> 'Members per year <strong>%d</strong>',
 	'USERS_PER_YEAR_ZERO'	=> 'Members per year <strong>None</strong>',
-	'TOTAL_FILES_OTHER'		=> 'Total attachments <strong>%d</strong>',
-	'TOTAL_FILES_ZERO'		=> 'Total attachments <strong>0</strong>',
-	'FILES_PER_DAY_OTHER'	=> 'Attachments per day <strong>%.2f</strong>',
-	'FILES_PER_DAY_ZERO'	=> 'Attachments per day <strong>None</strong>',
-	'FILES_PER_YEAR_OTHER'	=> 'Attachments per year <strong>%d</strong>',
-	'FILES_PER_YEAR_ZERO'	=> 'Attachments per year <strong>None</strong>',
-	'FILES_PER_USER_OTHER'	=> 'Attachments per member <strong>%.2f</strong>',
-	'FILES_PER_USER_ZERO'	=> 'Attachments per member <strong>None</strong>',
 ));

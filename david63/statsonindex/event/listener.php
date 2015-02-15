@@ -112,20 +112,24 @@ class listener implements EventSubscriberInterface
 		$l_users_per_year_s = ($users_per_year == 0) ? 'USERS_PER_YEAR_ZERO' : 'USERS_PER_YEAR_OTHER';
 
 		$this->template->assign_vars(array(
-			'POSTS_PER_DAY'   	=> sprintf($this->user->lang[$l_posts_per_day_s], $posts_per_day),
-    		'POSTS_PER_YEAR'    => sprintf($this->user->lang[$l_posts_per_year_s], $posts_per_year),
-    		'POSTS_PER_TOPIC'   => sprintf($this->user->lang[$l_posts_per_topic_s], $posts_per_topic),
-    		'POSTS_PER_USER'   	=> sprintf($this->user->lang[$l_posts_per_user_s], $posts_per_user),
-    		'TOPICS_PER_DAY'   	=> sprintf($this->user->lang[$l_topics_per_day_s], $topics_per_day),
-    		'TOPICS_PER_YEAR'   => sprintf($this->user->lang[$l_topics_per_year_s], $topics_per_year),
-    		'TOPICS_PER_USER'   => sprintf($this->user->lang[$l_topics_per_user_s], $topics_per_user),
-    		'TOTAL_FILES'    	=> sprintf($this->user->lang[$l_total_file_s], $this->config['num_files']),
-    		'FILES_PER_DAY'   	=> sprintf($this->user->lang[$l_files_per_day_s], $files_per_day),
-    		'FILES_PER_YEAR'    => sprintf($this->user->lang[$l_files_per_year_s], $files_per_year),
-    		'FILES_PER_USER'   	=> sprintf($this->user->lang[$l_files_per_user_s], $files_per_user),
-    		'USERS_PER_DAY'   	=> sprintf($this->user->lang[$l_users_per_day_s], $users_per_day),
-    		'USERS_PER_YEAR'    => sprintf($this->user->lang[$l_users_per_year_s], $users_per_year),
-			'START_DATE'        => date("d M Y, H:i:s", $this->config['board_startdate'] ),
+			'FILES_PER_DAY'   	=> sprintf($this->user->lang($l_files_per_day_s), $files_per_day),
+    		'FILES_PER_USER'   	=> sprintf($this->user->lang($l_files_per_user_s), $files_per_user),
+			'FILES_PER_YEAR'    => sprintf($this->user->lang($l_files_per_year_s), $files_per_year),
+
+			'POSTS_PER_DAY'   	=> sprintf($this->user->lang($l_posts_per_day_s), $posts_per_day),
+    		'POSTS_PER_TOPIC'   => sprintf($this->user->lang($l_posts_per_topic_s), $posts_per_topic),
+    		'POSTS_PER_USER'   	=> sprintf($this->user->lang($l_posts_per_user_s), $posts_per_user),
+			'POSTS_PER_YEAR'    => sprintf($this->user->lang($l_posts_per_year_s), $posts_per_year),
+
+			'START_DATE'        => $this->user->format_date($this->config['board_startdate']),
+
+    		'TOPICS_PER_DAY'   	=> sprintf($this->user->lang($l_topics_per_day_s), $topics_per_day),
+			'TOPICS_PER_USER'   => sprintf($this->user->lang($l_topics_per_user_s), $topics_per_user),
+    		'TOPICS_PER_YEAR'   => sprintf($this->user->lang($l_topics_per_year_s), $topics_per_year),
+    		'TOTAL_FILES'    	=> sprintf($this->user->lang($l_total_file_s), $this->config['num_files']),
+			
+    		'USERS_PER_DAY'   	=> sprintf($this->user->lang($l_users_per_day_s), $users_per_day),
+    		'USERS_PER_YEAR'    => sprintf($this->user->lang($l_users_per_year_s), $users_per_year),
 		));
 	}
 }
