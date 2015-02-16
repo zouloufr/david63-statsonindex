@@ -1,7 +1,11 @@
-<br /><hr>
-<p class="genmed"><strong>{L_EXTENDED}</strong> {L_COLON}<br />
-{TOTAL_POSTS} | {POSTS_PER_YEAR} | {POSTS_PER_DAY} | {POSTS_PER_TOPIC} | {POSTS_PER_USER}<br />
-{TOTAL_TOPICS} | {TOPICS_PER_YEAR} | {TOPICS_PER_DAY} | {TOPICS_PER_USER}<br />
-{TOTAL_FILES} | {FILES_PER_YEAR} | {FILES_PER_DAY} | {FILES_PER_USER}<br />
-{TOTAL_USERS} | {USERS_PER_YEAR} | {USERS_PER_DAY}<br />
-{L_START_DATE}<strong>{START_DATE}</strong></p>
+<!-- IF S_USER_LOGGED_IN -->
+	<!-- IF U_ACP && U_ADMIN_VIEW_ONLY or !U_ADMIN_VIEW_ONLY -->
+		<br /><hr>
+		<p class="genmed"><strong>{L_EXTENDED}</strong> {L_COLON}<br />
+		{TOTAL_POSTS} | {POSTS_PER_YEAR} | {POSTS_PER_DAY} | {POSTS_PER_TOPIC} | {POSTS_PER_USER}<br />
+		{TOTAL_TOPICS} | {TOPICS_PER_YEAR} | {TOPICS_PER_DAY} | {TOPICS_PER_USER}<br />
+		{TOTAL_FILES} | {FILES_PER_YEAR} | {FILES_PER_DAY} | {FILES_PER_USER}<br />
+		{TOTAL_USERS} | {USERS_PER_YEAR} | {USERS_PER_DAY}<br />
+		{L_START_DATE}<strong>{START_DATE}</strong></p>
+	<!-- ENDIF -->
+<!-- ENDIF -->

@@ -53,9 +53,43 @@ class listener implements EventSubscriberInterface
 	static public function getSubscribedEvents()
 	{
 		return array(
-			'core.index_modify_page_title'	=> 'add_stats_settings',
-			'core.user_setup'				=> 'load_language_on_setup',
+			'core.acp_board_config_edit_add'	=> 'acp_board_settings',
+			'core.user_setup'					=> 'load_language_on_setup',
+			'core.index_modify_page_title'		=> 'add_stats_settings',
 		);
+	}
+
+	/**
+	* Set ACP board settings
+	*
+	* @param object $event The event object
+	* @return null
+	* @access public
+	*/
+	public function acp_board_settings($event)
+	{
+		if ($event['mode'] == 'load')
+		{
+			$new_display_var = array(
+				'title'	=> $event['display_vars']['title'],
+				'vars'	=> array(),
+			);
+
+			foreach ($event['display_vars']['vars'] as $key => $content)
+			{
+				$new_display_var['vars'][$key] = $content;
+				if ($key == 'load_birthdays')
+				{
+					$new_display_var['vars']['statsonindex_admin'] = array(
+						'lang'		=> 'ADMIN_STATS',
+						'validate'	=> 'bool',
+						'type'		=> 'radio:yes_no',
+						'explain' 	=> true,
+					);
+				}
+			}
+			$event->offsetSet('display_vars', $new_display_var);
+		}
 	}
 
 	/**
@@ -86,6 +120,7 @@ class listener implements EventSubscriberInterface
 	public function add_stats_settings($event)
 	{
 		$l_total_file_s = ($this->config['num_files'] == 0) ? 'TOTAL_FILES_ZERO' : 'TOTAL_FILES_OTHER';
+
 		$posts_per_day = $this->config['num_posts'] / ceil((time() - $this->config['board_startdate']) / 86400);
 		$l_posts_per_day_s = ($posts_per_day == 0) ? 'POSTS_PER_DAY_ZERO' : 'POSTS_PER_DAY_OTHER';
 		$posts_per_year = $posts_per_day * 364.25;
@@ -127,9 +162,11 @@ class listener implements EventSubscriberInterface
 			'TOPICS_PER_USER'   => sprintf($this->user->lang($l_topics_per_user_s), $topics_per_user),
     		'TOPICS_PER_YEAR'   => sprintf($this->user->lang($l_topics_per_year_s), $topics_per_year),
     		'TOTAL_FILES'    	=> sprintf($this->user->lang($l_total_file_s), $this->config['num_files']),
-			
+
     		'USERS_PER_DAY'   	=> sprintf($this->user->lang($l_users_per_day_s), $users_per_day),
     		'USERS_PER_YEAR'    => sprintf($this->user->lang($l_users_per_year_s), $users_per_year),
+
+			'U_ADMIN_VIEW_ONLY'	=> $this->config['statsonindex_admin'],
 		));
 	}
 }

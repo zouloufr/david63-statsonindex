@@ -1,1 +1,5 @@
-<strong>{L_SUMMARY}</strong> &bull;&nbsp;
+<!-- IF S_USER_LOGGED_IN -->
+	<!-- IF U_ACP && U_ADMIN_VIEW_ONLY or !U_ADMIN_VIEW_ONLY -->
+		{L_SUMMARY} &bull;&nbsp;
+	<!-- ENDIF -->
+<!-- ENDIF -->

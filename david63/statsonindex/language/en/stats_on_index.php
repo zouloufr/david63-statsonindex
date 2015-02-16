@@ -46,6 +46,9 @@ $lang = array_merge($lang, array(
 	'FILES_PER_YEAR_OTHER'	=> 'Attachments per year <strong>%d</strong>',
 	'FILES_PER_YEAR_ZERO'	=> 'Attachments per year <strong>None</strong>',
 
+	'POSTS_PER_DAY'			=> 'Posts per day <strong>%.2f</strong>',
+	'NONE'					=> 'None',
+
 	'POSTS_PER_DAY_OTHER'	=> 'Posts per day <strong>%.2f</strong>',
 	'POSTS_PER_DAY_ZERO'	=> 'Posts per day <strong>None</strong>',
 	'POSTS_PER_TOPIC_OTHER'	=> 'Posts per topic <strong>%.2f</strong>',
@@ -56,7 +59,7 @@ $lang = array_merge($lang, array(
 	'POSTS_PER_YEAR_ZERO'	=> 'Posts per year <strong>None</strong>',
 
 	'START_DATE'			=> 'We have been online since',
-	'SUMMARY'				=> 'Summary',
+	'SUMMARY'				=> '<strong>Summary</strong>',
 
 	'TOPICS_PER_DAY_OTHER'	=> 'Topics per day <strong>%.2f</strong>',
 	'TOPICS_PER_DAY_ZERO'	=> 'Topics per day <strong>None</strong>',
