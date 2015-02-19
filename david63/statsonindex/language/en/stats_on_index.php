@@ -39,7 +39,7 @@ if (empty($lang) || !is_array($lang))
 $lang = array_merge($lang, array(
 	'EXTENDED'			=> '<strong>Extended statistics</strong>',
 
-	'FILES_PER_DAY'		=> array(
+	'FILE_PER_DAY'		=> array(
 		2	=> 'Attachments per day <strong>%1$s</strong>',
 	),
 	'FILES_PER_USER'	=> array(
@@ -51,7 +51,7 @@ $lang = array_merge($lang, array(
 
 	'NONE'				=> 'None',
 
-	'POSTS_PER_DAY'		=> array(
+	'POST_PER_DAY'		=> array(
 		2	=> 'Posts per day <strong>%1$s</strong>',
 	),
 	'POSTS_PER_TOPIC'	=> array(
@@ -67,7 +67,7 @@ $lang = array_merge($lang, array(
 	'START_DATE'		=> 'We have been online since',
 	'SUMMARY'			=> '<strong>Summary</strong>',
 
-	'TOPICS_PER_DAY'	=> array(
+	'TOPIC_PER_DAY'		=> array(
 		2	=> 'Topics per day <strong>%1$s</strong>',
 	),
 	'TOPICS_PER_USER'	=> array(
@@ -80,7 +80,7 @@ $lang = array_merge($lang, array(
 		2	=> 'Total attachments <strong>%1$s</strong>',
 	),
 
-	'USERS_PER_DAY'		=> array(
+	'USER_PER_DAY'		=> array(
 		2	=> 'Members per day <strong>%1$s</strong>',
 	),
 	'USERS_PER_YEAR'	=> array(
@@ -97,4 +97,5 @@ $lang = array_merge($lang, array(
 	'TOTAL_USERS'		=> array(
 		2	=> 'Total members <strong>%1$s</strong>',
 	),
+
 ));

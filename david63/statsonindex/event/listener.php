@@ -139,21 +139,21 @@ class listener implements EventSubscriberInterface
 		$none = $this->user->lang('NONE');
 
 		$this->template->assign_vars(array(
-			'FILES_PER_DAY'   	=> $this->user->lang('FILES_PER_DAY', ($files_per_day == 0) ? $none : $files_per_day),
+			'FILES_PER_DAY'   	=> $this->user->lang('FILE_PER_DAY', ($files_per_day == 0) ? $none : $files_per_day),
     		'FILES_PER_USER'   	=> $this->user->lang('FILES_PER_USER', ($files_per_user == 0) ? $none : $files_per_user),
 			'FILES_PER_YEAR'    => $this->user->lang('FILES_PER_YEAR', ($files_per_year == 0) ? $none : $files_per_year),
 
-			'POSTS_PER_DAY'   	=> $this->user->lang('POSTS_PER_DAY', ($posts_per_day == 0) ? $none : $posts_per_day),
+			'POSTS_PER_DAY'   	=> $this->user->lang('POST_PER_DAY', ($posts_per_day == 0) ? $none : $posts_per_day),
     		'POSTS_PER_TOPIC'   => $this->user->lang('POSTS_PER_TOPIC', ($posts_per_topic == 0) ? $none : $posts_per_topic),
     		'POSTS_PER_USER'   	=> $this->user->lang('POSTS_PER_USER', ($posts_per_user == 0) ? $none : $posts_per_user),
 			'POSTS_PER_YEAR'    => $this->user->lang('POSTS_PER_YEAR', ($posts_per_year == 0) ? $none : $posts_per_year),
 
-    		'TOPICS_PER_DAY'   	=> $this->user->lang('TOPICS_PER_DAY', ($topics_per_day == 0) ? $none : $topics_per_day),
+    		'TOPICS_PER_DAY'   	=> $this->user->lang('TOPIC_PER_DAY', ($topics_per_day == 0) ? $none : $topics_per_day),
 			'TOPICS_PER_USER'   => $this->user->lang('TOPICS_PER_USER', ($topics_per_user == 0) ? $none : $topics_per_user),
     		'TOPICS_PER_YEAR'   => $this->user->lang('TOPICS_PER_YEAR', ($topics_per_year == 0) ? $none : $topics_per_year),
     		'TOTAL_FILES'    	=> $this->user->lang('TOTAL_FILES', ($total_files == 0) ? $none : $total_files),
 
-    		'USERS_PER_DAY'   	=> $this->user->lang('USERS_PER_DAY', ($users_per_day == 0) ? $none : $users_per_day),
+    		'USERS_PER_DAY'   	=> $this->user->lang('USER_PER_DAY', ($users_per_day == 0) ? $none : $users_per_day),
     		'USERS_PER_YEAR'    => $this->user->lang('USERS_PER_YEAR', ($users_per_year == 0) ? $none : $users_per_year),
 
 			'START_DATE'        => $this->user->format_date($this->config['board_startdate']),
