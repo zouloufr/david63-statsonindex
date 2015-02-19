@@ -3,4 +3,9 @@ jQuery(function() {
 		$('.statsonindex').toggle();
 		return false;
 	});
+
+	$('#activityonindex').click(function() {
+		$('.activityonindex').toggle();
+		return false;
+	});
 });

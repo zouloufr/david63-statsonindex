@@ -38,6 +38,7 @@ if (empty($lang) || !is_array($lang))
 
 $lang = array_merge($lang, array(
 	'EXTENDED'			=> '<strong>Extended statistics</strong>',
+	'ACTIVITY'			=> '<strong>Active members</strong>',
 
 	'FILE_PER_DAY'		=> array(
 		2	=> 'Attachments per day <strong>%1$s</strong>',
@@ -97,5 +98,16 @@ $lang = array_merge($lang, array(
 	'TOTAL_USERS'		=> array(
 		2	=> 'Total members <strong>%1$s</strong>',
 	),
+
+	'USERS_TFHOUR_TOTAL'	=> array(
+		1	=> '%1$s User active over the last 24 hours',
+		2	=> '%1$s Users active over the last 24 hours',
+	),
+
+	'TFHOUR_TOPICS'			=> 'New Topics <strong>%1$s</strong>',
+	'TFHOUR_POSTS'			=> 'New Posts <strong>%1$s</strong>',
+	'TFHOUR_USERS'			=> 'New users <strong>%1$s</strong>',
+
+	'TWENTYFOURHOUR_STATS'			=> 'Activity over the last 24 hours',
 
 ));

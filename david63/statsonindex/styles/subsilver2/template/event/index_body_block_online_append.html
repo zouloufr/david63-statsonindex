@@ -1,0 +1,12 @@
+<!-- IF S_USER_LOGGED_IN -->
+	<!-- IF U_ACP && U_ADMIN_VIEW_ONLY or !U_ADMIN_VIEW_ONLY -->
+		<br /><br />
+		{USERS_TFHOUR_TOTAL}:
+		<!-- BEGIN lastvisit -->
+			{lastvisit.USERNAME_FULL}
+			<!-- IF not lastvisit.S_LAST_ROW -->
+				{L_COMMA_SEPARATOR}&nbsp;
+			<!-- ENDIF -->
+		<!-- END lastvisit -->
+	<!-- ENDIF -->
+<!-- ENDIF -->

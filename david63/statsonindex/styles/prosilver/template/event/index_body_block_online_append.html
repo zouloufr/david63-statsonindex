@@ -1,0 +1,20 @@
+<!-- IF S_USER_LOGGED_IN -->
+	<!-- IF U_ACP && U_ADMIN_VIEW_ONLY or !U_ADMIN_VIEW_ONLY -->
+		<div id="activityonindex">
+			<div class="navbar">
+				<div class="inner">
+					<a href="#" id="activityonindex">{L_ACTIVITY}</a>
+					<div class="activityonindex" style="display:none">
+					{USERS_TFHOUR_TOTAL}:
+					<!-- BEGIN lastvisit -->
+						{lastvisit.USERNAME_FULL}
+						<!-- IF not lastvisit.S_LAST_ROW -->
+							{L_COMMA_SEPARATOR}
+						<!-- ENDIF -->
+					<!-- END lastvisit -->
+					</div>
+				</div>
+			</div>
+		</div>
+	<!-- ENDIF -->
+<!-- ENDIF -->
