@@ -37,41 +37,64 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'EXTENDED'				=> '<strong>Extended statistics</strong>',
+	'EXTENDED'			=> '<strong>Extended statistics</strong>',
 
-	'FILES_PER_DAY_OTHER'	=> 'Attachments per day <strong>%.2f</strong>',
-	'FILES_PER_DAY_ZERO'	=> 'Attachments per day <strong>None</strong>',
-	'FILES_PER_USER_OTHER'	=> 'Attachments per member <strong>%.2f</strong>',
-	'FILES_PER_USER_ZERO'	=> 'Attachments per member <strong>None</strong>',
-	'FILES_PER_YEAR_OTHER'	=> 'Attachments per year <strong>%d</strong>',
-	'FILES_PER_YEAR_ZERO'	=> 'Attachments per year <strong>None</strong>',
+	'FILES_PER_DAY'		=> array(
+		2	=> 'Attachments per day <strong>%1$s</strong>',
+	),
+	'FILES_PER_USER'	=> array(
+		2	=> 'Attachments per member <strong>%1$s</strong>',
+	),
+	'FILES_PER_YEAR'	=> array(
+		2	=> 'Attachments per year <strong>%1$s</strong>',
+	),
 
-	'POSTS_PER_DAY'			=> 'Posts per day <strong>%.2f</strong>',
-	'NONE'					=> 'None',
+	'NONE'				=> 'None',
 
-	'POSTS_PER_DAY_OTHER'	=> 'Posts per day <strong>%.2f</strong>',
-	'POSTS_PER_DAY_ZERO'	=> 'Posts per day <strong>None</strong>',
-	'POSTS_PER_TOPIC_OTHER'	=> 'Posts per topic <strong>%.2f</strong>',
-	'POSTS_PER_TOPIC_ZERO'	=> 'Posts per topic <strong>None</strong>',
-	'POSTS_PER_USER_OTHER'	=> 'Posts per member <strong>%.2f</strong>',
-	'POSTS_PER_USER_ZERO'	=> 'Posts per member <strong>None</strong>',
-	'POSTS_PER_YEAR_OTHER'	=> 'Posts per year <strong>%d</strong>',
-	'POSTS_PER_YEAR_ZERO'	=> 'Posts per year <strong>None</strong>',
+	'POSTS_PER_DAY'		=> array(
+		2	=> 'Posts per day <strong>%1$s</strong>',
+	),
+	'POSTS_PER_TOPIC'	=> array(
+		2	=> 'Posts per topic <strong>%1$s</strong>',
+	),
+	'POSTS_PER_USER'	=> array(
+		2	=> 'Posts per member <strong>%1$s</strong>',
+	),
+	'POSTS_PER_YEAR'	=> array(
+		2	=> 'Posts per year <strong>%1$s</strong>',
+	),
 
-	'START_DATE'			=> 'We have been online since',
-	'SUMMARY'				=> '<strong>Summary</strong>',
+	'START_DATE'		=> 'We have been online since',
+	'SUMMARY'			=> '<strong>Summary</strong>',
 
-	'TOPICS_PER_DAY_OTHER'	=> 'Topics per day <strong>%.2f</strong>',
-	'TOPICS_PER_DAY_ZERO'	=> 'Topics per day <strong>None</strong>',
-	'TOPICS_PER_USER_OTHER'	=> 'Topics per member <strong>%.2f</strong>',
-	'TOPICS_PER_USER_ZERO'	=> 'Topics per member <strong>None</strong>',
-	'TOPICS_PER_YEAR_OTHER'	=> 'Topics per year <strong>%d</strong>',
-	'TOPICS_PER_YEAR_ZERO'	=> 'Topics per year <strong>None</strong>',
-	'TOTAL_FILES_OTHER'		=> 'Total attachments <strong>%d</strong>',
-	'TOTAL_FILES_ZERO'		=> 'Total attachments <strong>None</strong>',
+	'TOPICS_PER_DAY'	=> array(
+		2	=> 'Topics per day <strong>%1$s</strong>',
+	),
+	'TOPICS_PER_USER'	=> array(
+		2	=> 'Topics per member <strong>%1$s</strong>',
+	),
+	'TOPICS_PER_YEAR'	=> array(
+		2	=> 'Topics per year <strong>%1$s</strong>',
+	),
+	'TOTAL_FILES'		=> array(
+		2	=> 'Total attachments <strong>%1$s</strong>',
+	),
 
-	'USERS_PER_DAY_OTHER'	=> 'Members per day <strong>%.2f</strong>',
-	'USERS_PER_DAY_ZERO'	=> 'Members per day <strong>None</strong>',
-	'USERS_PER_YEAR_OTHER'	=> 'Members per year <strong>%d</strong>',
-	'USERS_PER_YEAR_ZERO'	=> 'Members per year <strong>None</strong>',
+	'USERS_PER_DAY'		=> array(
+		2	=> 'Members per day <strong>%1$s</strong>',
+	),
+	'USERS_PER_YEAR'	=> array(
+		2	=> 'Members per year <strong>%1$s</strong>',
+	),
+
+	// Reformat these for output consisency
+	'TOTAL_POSTS_COUNT'	=> array(
+		2	=> 'Total posts <strong>%1$s</strong>',
+	),
+	'TOTAL_TOPICS'		=> array(
+		2	=> 'Total topics <strong>%1$s</strong>',
+	),
+	'TOTAL_USERS'		=> array(
+		2	=> 'Total members <strong>%1$s</strong>',
+	),
 ));

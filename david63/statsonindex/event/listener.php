@@ -119,54 +119,50 @@ class listener implements EventSubscriberInterface
 	*/
 	public function add_stats_settings($event)
 	{
-		$l_total_file_s = ($this->config['num_files'] == 0) ? 'TOTAL_FILES_ZERO' : 'TOTAL_FILES_OTHER';
+		$files_per_day		= number_format($this->config['num_files'] / ceil((time() - $this->config['board_startdate']) / 86400), '2');
+		$files_per_user		= number_format($this->config['num_files'] / $this->config['num_users'], '2');
+		$files_per_year		= number_format($files_per_day * 364.25, '0');
 
-		$posts_per_day = $this->config['num_posts'] / ceil((time() - $this->config['board_startdate']) / 86400);
-		$l_posts_per_day_s = ($posts_per_day == 0) ? 'POSTS_PER_DAY_ZERO' : 'POSTS_PER_DAY_OTHER';
-		$posts_per_year = $posts_per_day * 364.25;
-		$l_posts_per_year_s = ($posts_per_year == 0) ? 'POSTS_PER_YEAR_ZERO' : 'POSTS_PER_YEAR_OTHER';
-		$posts_per_user = $this->config['num_posts'] / $this->config['num_users'];
-		$l_posts_per_user_s = ($posts_per_user == 0) ? 'POSTS_PER_USER_ZERO' : 'POSTS_PER_USER_OTHER';
-		$posts_per_topic = $this->config['num_posts'] / $this->config['num_topics'];
-		$l_posts_per_topic_s = ($posts_per_topic == 0) ? 'POSTS_PER_TOPIC_ZERO' : 'POSTS_PER_TOPIC_OTHER';
-		$topics_per_day = $this->config['num_topics'] / ceil((time() - $this->config['board_startdate']) / 86400);
-		$l_topics_per_day_s = ($topics_per_day == 0) ? 'TOPICS_PER_DAY_ZERO' : 'TOPICS_PER_DAY_OTHER';
-		$topics_per_year = $topics_per_day * 364.25;
-		$l_topics_per_year_s = ($topics_per_year == 0) ? 'TOPICS_PER_YEAR_ZERO' : 'TOPICS_PER_YEAR_OTHER';
-		$topics_per_user = $this->config['num_topics'] / $this->config['num_users'];
-		$l_topics_per_user_s = ($topics_per_user == 0) ? 'TOPICS_PER_USER_ZERO' : 'TOPICS_PER_USER_OTHER';
-		$files_per_day = $this->config['num_files'] / ceil((time() - $this->config['board_startdate']) / 86400);
-		$l_files_per_day_s = ($files_per_day == 0) ? 'FILES_PER_DAY_ZERO' : 'FILES_PER_DAY_OTHER';
-		$files_per_year = $files_per_day * 364.25;
-		$l_files_per_year_s = ($files_per_year == 0) ? 'FILES_PER_YEAR_ZERO' : 'FILES_PER_YEAR_OTHER';
-		$files_per_user = $this->config['num_files'] / $this->config['num_users'];
-		$l_files_per_user_s = ($files_per_day == 0) ? 'FILES_PER_USER_ZERO' : 'FILES_PER_USER_OTHER';
-		$users_per_day = $this->config['num_users'] / ceil((time() - $this->config['board_startdate']) / 86400);
-		$l_users_per_day_s = ($users_per_day == 0) ? 'USERS_PER_DAY_ZERO' : 'USERS_PER_DAY_OTHER';
-		$users_per_year = $users_per_day * 364.25;
-		$l_users_per_year_s = ($users_per_year == 0) ? 'USERS_PER_YEAR_ZERO' : 'USERS_PER_YEAR_OTHER';
+		$posts_per_day		= number_format($this->config['num_posts'] / ceil((time() - $this->config['board_startdate']) / 86400), '2');
+		$posts_per_topic	= number_format($this->config['num_posts'] / $this->config['num_topics'], '2');
+		$posts_per_user		= number_format($this->config['num_posts'] / $this->config['num_users'], '2');
+		$posts_per_year		= number_format($posts_per_day * 364.25, '0');
+
+		$topics_per_day		= number_format($this->config['num_topics'] / ceil((time() - $this->config['board_startdate']) / 86400), '2');
+		$topics_per_user	= number_format($this->config['num_topics'] / $this->config['num_users'], '2');
+		$topics_per_year	= number_format($topics_per_day * 364.25, '0');
+		$total_files		= number_format($this->config['num_files'], '0');
+
+		$users_per_day		= number_format($this->config['num_users'] / ceil((time() - $this->config['board_startdate']) / 86400), '2');
+		$users_per_year		= number_format($users_per_day * 364.25, '0');
+
+		$none = $this->user->lang('NONE');
 
 		$this->template->assign_vars(array(
-			'FILES_PER_DAY'   	=> sprintf($this->user->lang($l_files_per_day_s), $files_per_day),
-    		'FILES_PER_USER'   	=> sprintf($this->user->lang($l_files_per_user_s), $files_per_user),
-			'FILES_PER_YEAR'    => sprintf($this->user->lang($l_files_per_year_s), $files_per_year),
+			'FILES_PER_DAY'   	=> $this->user->lang('FILES_PER_DAY', ($files_per_day == 0) ? $none : $files_per_day),
+    		'FILES_PER_USER'   	=> $this->user->lang('FILES_PER_USER', ($files_per_user == 0) ? $none : $files_per_user),
+			'FILES_PER_YEAR'    => $this->user->lang('FILES_PER_YEAR', ($files_per_year == 0) ? $none : $files_per_year),
 
-			'POSTS_PER_DAY'   	=> sprintf($this->user->lang($l_posts_per_day_s), $posts_per_day),
-    		'POSTS_PER_TOPIC'   => sprintf($this->user->lang($l_posts_per_topic_s), $posts_per_topic),
-    		'POSTS_PER_USER'   	=> sprintf($this->user->lang($l_posts_per_user_s), $posts_per_user),
-			'POSTS_PER_YEAR'    => sprintf($this->user->lang($l_posts_per_year_s), $posts_per_year),
+			'POSTS_PER_DAY'   	=> $this->user->lang('POSTS_PER_DAY', ($posts_per_day == 0) ? $none : $posts_per_day),
+    		'POSTS_PER_TOPIC'   => $this->user->lang('POSTS_PER_TOPIC', ($posts_per_topic == 0) ? $none : $posts_per_topic),
+    		'POSTS_PER_USER'   	=> $this->user->lang('POSTS_PER_USER', ($posts_per_user == 0) ? $none : $posts_per_user),
+			'POSTS_PER_YEAR'    => $this->user->lang('POSTS_PER_YEAR', ($posts_per_year == 0) ? $none : $posts_per_year),
+
+    		'TOPICS_PER_DAY'   	=> $this->user->lang('TOPICS_PER_DAY', ($topics_per_day == 0) ? $none : $topics_per_day),
+			'TOPICS_PER_USER'   => $this->user->lang('TOPICS_PER_USER', ($topics_per_user == 0) ? $none : $topics_per_user),
+    		'TOPICS_PER_YEAR'   => $this->user->lang('TOPICS_PER_YEAR', ($topics_per_year == 0) ? $none : $topics_per_year),
+    		'TOTAL_FILES'    	=> $this->user->lang('TOTAL_FILES', ($total_files == 0) ? $none : $total_files),
+
+    		'USERS_PER_DAY'   	=> $this->user->lang('USERS_PER_DAY', ($users_per_day == 0) ? $none : $users_per_day),
+    		'USERS_PER_YEAR'    => $this->user->lang('USERS_PER_YEAR', ($users_per_year == 0) ? $none : $users_per_year),
 
 			'START_DATE'        => $this->user->format_date($this->config['board_startdate']),
-
-    		'TOPICS_PER_DAY'   	=> sprintf($this->user->lang($l_topics_per_day_s), $topics_per_day),
-			'TOPICS_PER_USER'   => sprintf($this->user->lang($l_topics_per_user_s), $topics_per_user),
-    		'TOPICS_PER_YEAR'   => sprintf($this->user->lang($l_topics_per_year_s), $topics_per_year),
-    		'TOTAL_FILES'    	=> sprintf($this->user->lang($l_total_file_s), $this->config['num_files']),
-
-    		'USERS_PER_DAY'   	=> sprintf($this->user->lang($l_users_per_day_s), $users_per_day),
-    		'USERS_PER_YEAR'    => sprintf($this->user->lang($l_users_per_year_s), $users_per_year),
-
 			'U_ADMIN_VIEW_ONLY'	=> $this->config['statsonindex_admin'],
+
+			// Reformat these for output consisency
+			'TOTAL_POSTS'		=> $this->user->lang('TOTAL_POSTS_COUNT', number_format($this->config['num_posts'], '0')),
+			'TOTAL_TOPICS'		=> $this->user->lang('TOTAL_TOPICS', number_format($this->config['num_topics'], '0')),
+			'TOTAL_USERS'		=> $this->user->lang('TOTAL_USERS', number_format($this->config['num_users'], '0')),
 		));
 	}
 }
