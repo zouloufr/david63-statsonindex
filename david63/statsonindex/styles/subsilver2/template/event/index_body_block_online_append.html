@@ -1,12 +1,7 @@
-<!-- IF S_USER_LOGGED_IN -->
-	<!-- IF U_ACP && U_ADMIN_VIEW_ONLY or !U_ADMIN_VIEW_ONLY -->
-		<br /><br />
-		{USERS_TFHOUR_TOTAL}{L_COLON}
-		<!-- BEGIN lastvisit -->
-			{lastvisit.USERNAME_FULL}
-			<!-- IF not lastvisit.S_LAST_ROW -->
-				{L_COMMA_SEPARATOR}&nbsp;
-			<!-- ENDIF -->
-		<!-- END lastvisit -->
-	<!-- ENDIF -->
+<!-- IF S_DISPLAY_STATS_OUTPUT -->
+	<br /><br />
+	<strong>{USERS_TFHOUR_TOTAL}</strong> {L_COLON}
+	<!-- BEGIN lastvisit -->
+		{lastvisit.USERNAME_FULL}<!-- IF not lastvisit.S_LAST_ROW -->{L_COMMA_SEPARATOR}<!-- ENDIF -->
+	<!-- END lastvisit -->
 <!-- ENDIF -->

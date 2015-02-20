@@ -3,7 +3,7 @@
 	"type": "phpbb-extension",
 	"description": "Display an extended statistics expandable panel on the board index.",
 	"homepage": "",
-	"version": "1.0.0-b2",
+	"version": "1.0.0-b3",
 	"time": "2015-02-15",
 		"keywords": ["phpbb", "extension", "statistics", "index"],
 	"license": "GPL-2.0",

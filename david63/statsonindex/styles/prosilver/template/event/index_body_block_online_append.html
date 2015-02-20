@@ -1,20 +1,15 @@
-<!-- IF S_USER_LOGGED_IN -->
-	<!-- IF U_ACP && U_ADMIN_VIEW_ONLY or !U_ADMIN_VIEW_ONLY -->
-		<div id="activityonindex">
-			<div class="navbar">
-				<div class="inner">
-					<a href="#" id="activityonindex">{L_ACTIVITY}</a>
-					<div class="activityonindex" style="display:none">
-					{USERS_TFHOUR_TOTAL}{L_COLON}
-					<!-- BEGIN lastvisit -->
-						{lastvisit.USERNAME_FULL}
-						<!-- IF not lastvisit.S_LAST_ROW -->
-							{L_COMMA_SEPARATOR}
-						<!-- ENDIF -->
-					<!-- END lastvisit -->
-					</div>
+<!-- IF S_DISPLAY_STATS_OUTPUT -->
+	<div id="activityonindex">
+		<div class="stats_panel">
+			<div class="inner">
+				<div class="stats"><a href="#" id="activityonindex">{L_ACTIVITY}</a></div>
+				<div class="activityonindex" style="display:none">
+				<p><strong>{USERS_TFHOUR_TOTAL}</strong> {L_COLON}
+				<!-- BEGIN lastvisit -->
+					{lastvisit.USERNAME_FULL}<!-- IF not lastvisit.S_LAST_ROW -->{L_COMMA_SEPARATOR}<!-- ENDIF -->
+				<!-- END lastvisit --></p>
 				</div>
 			</div>
 		</div>
-	<!-- ENDIF -->
+	</div>
 <!-- ENDIF -->

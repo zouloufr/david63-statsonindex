@@ -1,0 +1,16 @@
+.stats {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	border-bottom: 1px solid transparent;
+	margin-bottom: 3px;
+	padding-bottom: 2px;
+	font-size: 1.05em;
+	margin-top: 3px;
+}
+
+.stats_panel {
+	background: transparent none repeat-x 0 0;
+	margin: 2px 0;
+	padding: 2px 10px;
+}

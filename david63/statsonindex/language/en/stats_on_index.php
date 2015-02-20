@@ -37,77 +37,42 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'EXTENDED'			=> '<strong>Extended statistics</strong>',
-	'ACTIVITY'			=> '<strong>Active members</strong>',
+	'ACTIVITY'				=> 'Active members',
 
-	'FILE_PER_DAY'		=> array(
-		2	=> 'Attachments per day <strong>%1$s</strong>',
-	),
-	'FILES_PER_USER'	=> array(
-		2	=> 'Attachments per member <strong>%1$s</strong>',
-	),
-	'FILES_PER_YEAR'	=> array(
-		2	=> 'Attachments per year <strong>%1$s</strong>',
-	),
+	'EXTENDED'				=> 'Extended statistics',
 
-	'NONE'				=> 'None',
+	'FILE_PER_DAY'			=> 'Attachments per day <strong>%1$s</strong>',
+	'FILES_PER_USER'		=> 'Attachments per member <strong>%1$s</strong>',
+	'FILES_PER_YEAR'		=> 'Attachments per year <strong>%1$s</strong>',
 
-	'POST_PER_DAY'		=> array(
-		2	=> 'Posts per day <strong>%1$s</strong>',
-	),
-	'POSTS_PER_TOPIC'	=> array(
-		2	=> 'Posts per topic <strong>%1$s</strong>',
-	),
-	'POSTS_PER_USER'	=> array(
-		2	=> 'Posts per member <strong>%1$s</strong>',
-	),
-	'POSTS_PER_YEAR'	=> array(
-		2	=> 'Posts per year <strong>%1$s</strong>',
-	),
+	'NONE'					=> 'None',
 
-	'START_DATE'		=> 'We have been online since',
-	'SUMMARY'			=> '<strong>Summary</strong>',
+	'POST_PER_DAY'			=> 'Posts per day <strong>%1$s</strong>',
+	'POSTS_PER_TOPIC'		=> 'Posts per topic <strong>%1$s</strong>',
+	'POSTS_PER_USER'		=> 'Posts per member <strong>%1$s</strong>',
+	'POSTS_PER_YEAR'		=> 'Posts per year <strong>%1$s</strong>',
 
-	'TOPIC_PER_DAY'		=> array(
-		2	=> 'Topics per day <strong>%1$s</strong>',
-	),
-	'TOPICS_PER_USER'	=> array(
-		2	=> 'Topics per member <strong>%1$s</strong>',
-	),
-	'TOPICS_PER_YEAR'	=> array(
-		2	=> 'Topics per year <strong>%1$s</strong>',
-	),
-	'TOTAL_FILES'		=> array(
-		2	=> 'Total attachments <strong>%1$s</strong>',
-	),
+	'START_DATE'			=> 'We have been online since',
+	'SUMMARY'				=> '<strong>Summary</strong>',
 
-	'USER_PER_DAY'		=> array(
-		2	=> 'Members per day <strong>%1$s</strong>',
-	),
-	'USERS_PER_YEAR'	=> array(
-		2	=> 'Members per year <strong>%1$s</strong>',
-	),
+	'TFHOUR_POSTS'			=> 'New Posts <strong>%1$s</strong>',
+	'TFHOUR_TOPICS'			=> 'New Topics <strong>%1$s</strong>',
+	'TFHOUR_USERS'			=> 'New users <strong>%1$s</strong>',
+	'TOPIC_PER_DAY'			=> 'Topics per day <strong>%1$s</strong>',
+	'TOPICS_PER_USER'		=> 'Topics per member <strong>%1$s</strong>',
+	'TOPICS_PER_YEAR'		=> 'Topics per year <strong>%1$s</strong>',
+	'TOTAL_FILES'			=> 'Total attachments <strong>%1$s</strong>',
+	'TWENTYFOURHOUR_STATS'	=> 'Activity over the last 24 hours',
 
-	// Reformat these for output consisency
-	'TOTAL_POSTS_COUNT'	=> array(
-		2	=> 'Total posts <strong>%1$s</strong>',
-	),
-	'TOTAL_TOPICS'		=> array(
-		2	=> 'Total topics <strong>%1$s</strong>',
-	),
-	'TOTAL_USERS'		=> array(
-		2	=> 'Total members <strong>%1$s</strong>',
-	),
-
+	'USER_PER_DAY'			=> 'Members per day <strong>%1$s</strong>',
+	'USERS_PER_YEAR'		=> 'Members per year <strong>%1$s</strong>',
 	'USERS_TFHOUR_TOTAL'	=> array(
 		1	=> '%1$s User active over the last 24 hours',
 		2	=> '%1$s Users active over the last 24 hours',
 	),
 
-	'TFHOUR_TOPICS'			=> 'New Topics <strong>%1$s</strong>',
-	'TFHOUR_POSTS'			=> 'New Posts <strong>%1$s</strong>',
-	'TFHOUR_USERS'			=> 'New users <strong>%1$s</strong>',
-
-	'TWENTYFOURHOUR_STATS'			=> 'Activity over the last 24 hours',
-
+	// Reformat these for output consisency
+	'TOTAL_POSTS_COUNT'		=> 'Total posts <strong>%1$s</strong>',
+	'TOTAL_TOPICS'			=> 'Total topics <strong>%1$s</strong>',
+	'TOTAL_USERS'			=> 'Total members <strong>%1$s</strong>',
 ));
