@@ -37,9 +37,9 @@ if (empty($lang) || !is_array($lang))
 //
 
 $lang = array_merge($lang, array(
-	'ACTIVITY'				=> 'Miembros activos',
+	'ACTIVITY'				=> 'Miembros activos <strong>»»</strong>',
 
-	'EXTENDED'				=> 'Estadísticas ampliadas',
+	'EXTENDED'				=> 'Estadísticas ampliadas <strong>»»</strong>',
 
 	'FILE_PER_DAY'			=> 'Adjuntos por día <strong>%1$s</strong>',
 	'FILES_PER_USER'		=> 'Adjuntos por miembro <strong>%1$s</strong>',
